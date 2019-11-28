@@ -1,0 +1,51 @@
+{
+  "name": "reactive",
+  "version": "1.0.0",
+  "description": "Boilerplate for Web Application using React.js",
+  "main": "index.js",
+  "repository": "git@github.com:speedmonkey/reactive.git",
+  "author": "Speedmonkey",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --mode development",
+    "commit": "git-cz",
+    "commitmsg": "validate-commit-msg"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-commit"
+    },
+    "validate-commit-msg": {
+      "types": [
+        "feat",
+        "fix",
+        "style",
+        "refactor"
+      ],
+      "warnOnFail": false,
+      "maxSubjectLength": 100,
+      "subjectPatternErrorMsg": "Subject must be in format 'feat(newFunctionnality): Implement this new functionnality",
+      "helpMessage": ""
+    }
+  },
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "@babel/preset-react": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "commitizen": "^4.0.3",
+    "css-loader": "^3.2.0",
+    "cz-conventional-commit": "^1.0.6",
+    "prettier": "^1.19.1",
+    "style-loader": "^1.0.0",
+    "validate-commit-msg": "^2.14.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  }
+}
