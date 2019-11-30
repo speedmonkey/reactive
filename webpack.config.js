@@ -23,6 +23,10 @@ module.exports = {
   },
   resolve: {
     extensions: ['*', '.js', '.jsx'],
+    alias: {
+      'root': path.resolve(__dirname, './'), // prettier-ignore
+      'pages': path.resolve(__dirname, 'src/pages') // prettier-ignore
+    },
   },
   output: {
     path: path.resolve(__dirname, 'build/'),
