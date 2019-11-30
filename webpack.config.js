@@ -8,7 +8,7 @@ module.exports = {
     rules: [
       {
         // All JavaScript files will be transform with Babel
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
         options: { presets: ['@babel/env'] },
@@ -30,6 +30,7 @@ module.exports = {
     filename: 'bundle.js',
   },
   devServer: {
+    historyApiFallback: true,
     contentBase: path.join(__dirname, 'public/'),
     port: 3000,
     publicPath: 'http://localhost:3000/build/',
