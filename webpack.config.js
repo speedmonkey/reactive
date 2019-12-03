@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.jsx',
   mode: 'development',
   module: {
     rules: [
@@ -24,8 +24,10 @@ module.exports = {
   resolve: {
     extensions: ['*', '.js', '.jsx'],
     alias: {
+      /* eslint-disable */
       'root': path.resolve(__dirname, './'), // prettier-ignore
       'pages': path.resolve(__dirname, 'src/pages') // prettier-ignore
+      /* eslint-enable */
     },
   },
   output: {
