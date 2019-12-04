@@ -5,7 +5,7 @@ import { Switch, Route } from 'react-router-dom';
 import HomePage from 'pages/Home';
 import NotFoundPage from 'pages/NotFound';
 
-const App = () => (
+const Layout = () => (
   <div>
     <Switch>
       <Route exact path="/" component={HomePage} />
@@ -14,4 +14,4 @@ const App = () => (
   </div>
 );
 
-export default App;
+export default Layout;
