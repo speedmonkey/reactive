@@ -6,7 +6,8 @@
       "actions/*": ["src/actions/*"],
       "constants/*": ["src/constants/*"],
       "pages/*": ["src/pages/*"],
-      "reducers/*": ["src/reducers/*"]
+      "reducers/*": ["src/reducers/*"],
+      "selectors/*": ["src/selectors/*"]
     },
     "jsx": "react"
   },

@@ -4,10 +4,11 @@ import {
   incrementAction,
   decrementAction,
 } from 'actions/homeActions';
+import { counterSelector } from 'selectors/homeSelectors';
 import HomeView from './View';
 
 const mapStateToProps = state => ({
-  counter: state.home.counter,
+  counter: counterSelector(state),
 });
 
 const mapDispatchToProps = dispatch => ({
