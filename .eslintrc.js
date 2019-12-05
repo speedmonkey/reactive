@@ -64,6 +64,14 @@ module.exports = {
     'react/require-extension': 0,
     'react/self-closing-comp': 0,
     'react/sort-comp': 0,
+    'consistent-return': 0,
+    'no-param-reassign': [
+      2,
+      {
+        props: true,
+        ignorePropertyModificationsFor: ['draft'],
+      },
+    ],
   },
   globals: {
     window: true,

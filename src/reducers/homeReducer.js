@@ -3,27 +3,21 @@ import {
   DECREMENT,
 } from 'constants/homeConstants';
 
+import produce from 'immer';
+
 const initialState = {
   counter: 0,
 };
 
-export default (state = initialState, action) => {
+export default produce((draft = initialState, action) => {
   switch (action.type) {
     case INCREMENT:
-      return {
-        ...state,
-        counter: state.counter + 1,
-      };
-    case DECREMENT: {
-      if (state.counter !== 0) {
-        return {
-          ...state,
-          counter: state.counter - 1,
-        };
-      }
-      return state;
-    }
+      draft.counter += 1;
+      break;
+    case DECREMENT:
+      if (draft.counter !== 0) draft.counter -= 1;
+      break;
     default:
-      return state;
+      return draft;
   }
-};
+});
