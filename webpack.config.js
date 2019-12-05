@@ -26,7 +26,10 @@ module.exports = {
     alias: {
       /* eslint-disable */
       'root': path.resolve(__dirname, './'), // prettier-ignore
-      'pages': path.resolve(__dirname, 'src/pages') // prettier-ignore
+      'actions': path.resolve(__dirname, 'src/actions'), // prettier-ignore
+      'constants': path.resolve(__dirname, 'src/constants'), // prettier-ignore
+      'pages': path.resolve(__dirname, 'src/pages'), // prettier-ignore
+      'reducers': path.resolve(__dirname, 'src/reducers') // prettier-ignore
       /* eslint-enable */
     },
   },

@@ -171,7 +171,7 @@ module.exports = {
   */
 
   width: {
-    sizes,
+    ...sizes,
     full: '100%',
     screen: '100vw',
   },
