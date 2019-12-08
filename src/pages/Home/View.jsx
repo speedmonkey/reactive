@@ -23,7 +23,7 @@ const HomeView = ({ counter, increment, decrement }) => (
       id="nav.test"
       defaultMessage="HELLO"
     />
-    <p>Vous avez compter {counter} fois !</p>
+    <p>Vous avez compter {counter} fois.</p>
     <Row>
       <Button onClick={increment}>Increment</Button>
       <Button onClick={decrement}>Decrement</Button>
