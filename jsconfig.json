@@ -2,8 +2,9 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "components/*": ["src/components/*"],
-      "containers/*": ["src/containers/*"],
+      "components/*": ["app/components/*"],
+      "containers/*": ["app/containers/*"],
+      "images/*": ["app/images/*"],
       "~/*": ["./*"]
     },
     "jsx": "react"
