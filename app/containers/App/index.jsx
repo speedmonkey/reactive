@@ -2,16 +2,16 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 // Imports pages
-import HomePage from 'containers/Home';
+import Home from 'containers/Home';
 import NotFoundPage from 'containers/NotFound';
 
-const Layout = () => (
+const App = () => (
   <div>
     <Switch>
-      <Route exact path="/" component={HomePage} />
+      <Route exact path="/" component={Home} />
       <Route component={NotFoundPage} />
     </Switch>
   </div>
 );
 
-export default Layout;
+export default App;

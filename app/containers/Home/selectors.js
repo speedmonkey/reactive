@@ -1,8 +1,9 @@
 import { createSelector } from 'reselect';
+import { initialState } from './reducer';
 
-export const homeSelector = state => state.home;
+const selectHome = state => state.home || initialState;
 
-export const counterSelector = createSelector(
-  homeSelector,
-  home => home.counter,
-);
+const makeSelectCounter = () =>
+  createSelector(selectHome, homeState => homeState.counter);
+
+export { selectHome, makeSelectCounter };
