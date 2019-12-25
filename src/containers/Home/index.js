@@ -3,8 +3,8 @@ import { compose } from 'redux';
 import {
   incrementAction,
   decrementAction,
-} from 'actions/homeActions';
-import { counterSelector } from 'selectors/homeSelectors';
+} from './actions';
+import { counterSelector } from './selectors';
 import HomeView from './View';
 
 const mapStateToProps = state => ({

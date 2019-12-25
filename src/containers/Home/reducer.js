@@ -1,9 +1,5 @@
-import {
-  INCREMENT,
-  DECREMENT,
-} from 'constants/homeConstants';
-
 import produce from 'immer';
+import { INCREMENT, DECREMENT } from './constants';
 
 const initialState = {
   counter: 0,

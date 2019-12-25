@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-  entry: './src/app.js',
+  entry: './src/index.js',
   mode: 'development',
   module: {
     rules: [
@@ -25,12 +25,9 @@ module.exports = {
     extensions: ['*', '.js', '.jsx'],
     alias: {
       /* eslint-disable */
-      'root': path.resolve(__dirname, './'), // prettier-ignore
-      'actions': path.resolve(__dirname, 'src/actions'), // prettier-ignore
-      'constants': path.resolve(__dirname, 'src/constants'), // prettier-ignore
-      'pages': path.resolve(__dirname, 'src/pages'), // prettier-ignore
-      'reducers': path.resolve(__dirname, 'src/reducers'), // prettier-ignore
-      'selectors': path.resolve(__dirname, 'src/selectors') // prettier-ignore
+      'components': path.resolve(__dirname, 'src/components'), // prettier-ignore
+      'containers': path.resolve(__dirname, 'src/containers'), // prettier-ignore
+      '~': path.resolve(__dirname, './') // prettier-ignore
       /* eslint-enable */
     },
   },

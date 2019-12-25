@@ -2,8 +2,8 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 // Imports pages
-import HomePage from 'pages/Home';
-import NotFoundPage from 'pages/NotFound';
+import HomePage from 'containers/Home';
+import NotFoundPage from 'containers/NotFound';
 
 const Layout = () => (
   <div>

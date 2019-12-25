@@ -2,12 +2,9 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "root/*": ["./*"],
-      "actions/*": ["src/actions/*"],
-      "constants/*": ["src/constants/*"],
-      "pages/*": ["src/pages/*"],
-      "reducers/*": ["src/reducers/*"],
-      "selectors/*": ["src/selectors/*"]
+      "components/*": ["src/components/*"],
+      "containers/*": ["src/containers/*"],
+      "~/*": ["./*"]
     },
     "jsx": "react"
   },

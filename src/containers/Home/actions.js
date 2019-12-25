@@ -1,7 +1,4 @@
-import {
-  INCREMENT,
-  DECREMENT,
-} from 'constants/homeConstants';
+import { INCREMENT, DECREMENT } from './constants';
 
 export function incrementAction() {
   return {
