@@ -14,9 +14,7 @@ View the full documentation at https://tailwindcss.com.
 const colors = {
   body: '#FCFCFE',
   blue: '#3E417E',
-  blueDarker: '#25274C',
   white: '#FFFFFF',
-  blueLight: '#F0F2FE',
 };
 
 const sizes = {
@@ -217,10 +215,8 @@ module.exports = {
   shadows: {
     def: '0 2px 30px 0 rgba(0, 0, 0, 0.1)',
     default: '0px 0px 30px 0px rgba(231, 232, 240, 1)',
-    md:
-      '0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08)',
-    lg:
-      '0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)',
+    md: '0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08)',
+    lg: '0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)',
     inner: 'inset 0 2px 4px 0 rgba(0,0,0,0.06)',
     outline: '0 0 0 3px rgba(52,144,220,0.5)',
     header: '0 1px 4px 0 rgba(0,0,0,0.10)',

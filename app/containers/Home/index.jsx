@@ -4,6 +4,7 @@ import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
+import messages from './messages';
 import { incrementAction, decrementAction } from './actions';
 import { makeSelectCounter } from './selectors';
 import { Flex, Row, Button } from './styles';
@@ -11,7 +12,9 @@ import { Flex, Row, Button } from './styles';
 function Home({ counter, increment, decrement }) {
   return (
     <Flex>
-      <FormattedMessage id="nav.test" defaultMessage="HELLO" />
+      <p>
+        <FormattedMessage {...messages.startProject} />
+      </p>
       <p>Vous avez compter {counter} fois.</p>
       <Row>
         <Button onClick={increment}>Increment</Button>
@@ -24,7 +27,7 @@ function Home({ counter, increment, decrement }) {
 Home.propTypes = {
   counter: PropTypes.number.isRequired,
   increment: PropTypes.func,
-  decrement: PropTypes.func,
+  decrement: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = createStructuredSelector({

@@ -4,14 +4,20 @@ import { Switch, Route } from 'react-router-dom';
 // Imports pages
 import Home from 'containers/Home';
 import NotFoundPage from 'containers/NotFound';
+import Header from 'containers/Header';
+import GlobalStyle from './globalStyles';
 
-const App = () => (
-  <div>
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <Route component={NotFoundPage} />
-    </Switch>
-  </div>
-);
+function App() {
+  return (
+    <div>
+      <Header />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route component={NotFoundPage} />
+      </Switch>
+      <GlobalStyle />
+    </div>
+  );
+}
 
 export default App;

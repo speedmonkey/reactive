@@ -2,15 +2,13 @@ const fs = require('fs');
 const path = require('path');
 
 const prettierOptions = JSON.parse(
-  fs.readFileSync(
-    path.resolve(__dirname, '.prettierrc'),
-    'utf8',
-  ),
+  fs.readFileSync(path.resolve(__dirname, '.prettierrc'), 'utf8'),
 );
 
 module.exports = {
   parser: 'babel-eslint',
   extends: ['airbnb', 'prettier', 'prettier/react'],
+  plugins: ['prettier', 'react', 'react-hooks', 'jsx-a11y'],
   settings: {
     'import/extensions': ['.js', '.jsx'],
     'import/resolver': {
@@ -19,7 +17,6 @@ module.exports = {
       },
     },
   },
-  plugins: ['prettier'],
   rules: {
     'prettier/prettier': ['error', prettierOptions],
     'arrow-body-style': [2, 'as-needed'],
@@ -42,6 +39,15 @@ module.exports = {
     ],
     'jsx-a11y/aria-props': 2,
     'jsx-a11y/heading-has-content': 0,
+    'jsx-a11y/label-has-associated-control': [
+      2,
+      {
+        // NOTE: If this error triggers, either disable it or add
+        // your custom components, labels and attributes via these options
+        // See https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/label-has-associated-control.md
+        controlComponents: ['Input'],
+      },
+    ],
     'jsx-a11y/label-has-for': 0,
     'jsx-a11y/mouse-events-have-key-events': 2,
     'jsx-a11y/role-has-required-aria-props': 2,
@@ -49,11 +55,12 @@ module.exports = {
     'max-len': 0,
     'newline-per-chained-call': 0,
     'no-confusing-arrow': 0,
-    'no-console': 0,
+    'no-console': 1,
     'no-unused-vars': 2,
     'no-use-before-define': 0,
     'prefer-template': 2,
     'react/destructuring-assignment': 0,
+    'react-hooks/rules-of-hooks': 'error',
     'react/jsx-closing-tag-location': 0,
     'react/forbid-prop-types': 0,
     'react/jsx-first-prop-new-line': [2, 'multiline'],
@@ -64,14 +71,6 @@ module.exports = {
     'react/require-extension': 0,
     'react/self-closing-comp': 0,
     'react/sort-comp': 0,
-    'consistent-return': 0,
-    'no-param-reassign': [
-      2,
-      {
-        props: true,
-        ignorePropertyModificationsFor: ['draft'],
-      },
-    ],
   },
   globals: {
     window: true,
