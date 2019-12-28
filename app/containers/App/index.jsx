@@ -7,17 +7,15 @@ import NotFoundPage from 'containers/NotFound';
 import Header from 'containers/Header';
 import GlobalStyle from './globalStyles';
 
-function App() {
-  return (
-    <div>
-      <Header />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route component={NotFoundPage} />
-      </Switch>
-      <GlobalStyle />
-    </div>
-  );
-}
+const App = () => (
+  <div>
+    <Header />
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route component={NotFoundPage} />
+    </Switch>
+    <GlobalStyle />
+  </div>
+);
 
 export default App;

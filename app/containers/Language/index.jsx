@@ -12,13 +12,11 @@ import { createStructuredSelector } from 'reselect';
 import { IntlProvider } from 'react-intl';
 import { makeSelectLocale } from './selectors';
 
-function Language({ locale, messages, children }) {
-  return (
-    <IntlProvider locale={locale} key={locale} messages={messages[locale]}>
-      {React.Children.only(children)}
-    </IntlProvider>
-  );
-}
+const Language = ({ locale, messages, children }) => (
+  <IntlProvider locale={locale} key={locale} messages={messages[locale]}>
+    {React.Children.only(children)}
+  </IntlProvider>
+);
 
 Language.propTypes = {
   locale: PropTypes.string,

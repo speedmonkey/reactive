@@ -71,6 +71,12 @@ module.exports = {
     'react/require-extension': 0,
     'react/self-closing-comp': 0,
     'react/sort-comp': 0,
+    'react/jsx-props-no-spreading': [
+      2,
+      {
+        custom: 'ignore',
+      },
+    ],
   },
   globals: {
     window: true,

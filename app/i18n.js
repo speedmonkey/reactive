@@ -42,5 +42,6 @@ const translationMessages = {
   en: formatTranslationMessages('en', enTranslationMessages),
 };
 
+exports.DEFAULT_LOCALE = DEFAULT_LOCALE;
 exports.getTranslation = getTranslation;
 exports.translationMessages = translationMessages;

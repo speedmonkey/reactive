@@ -9,20 +9,18 @@ import { incrementAction, decrementAction } from './actions';
 import { makeSelectCounter } from './selectors';
 import { Flex, Row, Button } from './styles';
 
-function Home({ counter, increment, decrement }) {
-  return (
-    <Flex>
-      <p>
-        <FormattedMessage {...messages.startProject} />
-      </p>
-      <p>Vous avez compter {counter} fois.</p>
-      <Row>
-        <Button onClick={increment}>Increment</Button>
-        <Button onClick={decrement}>Decrement</Button>
-      </Row>
-    </Flex>
-  );
-}
+const Home = ({ counter, increment, decrement }) => (
+  <Flex>
+    <p>
+      <FormattedMessage {...messages.startProject} />
+    </p>
+    <p>Vous avez compter {counter} fois.</p>
+    <Row>
+      <Button onClick={increment}>Increment</Button>
+      <Button onClick={decrement}>Decrement</Button>
+    </Row>
+  </Flex>
+);
 
 Home.propTypes = {
   counter: PropTypes.number.isRequired,
@@ -34,12 +32,10 @@ const mapStateToProps = createStructuredSelector({
   counter: makeSelectCounter(),
 });
 
-function mapDispatchToProps(dispatch) {
-  return {
-    increment: () => dispatch(incrementAction()),
-    decrement: () => dispatch(decrementAction()),
-  };
-}
+const mapDispatchToProps = dispatch => ({
+  increment: () => dispatch(incrementAction()),
+  decrement: () => dispatch(decrementAction()),
+});
 
 const withConnect = connect(mapStateToProps, mapDispatchToProps);
 
