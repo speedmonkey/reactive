@@ -1,9 +1,9 @@
 import { createStore, compose, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
 import rootReducer from './rootReducer';
+import { actionMiddleware } from './middlewares';
 
 // Create the sore with redux-thunk middleware
-const enhancers = [applyMiddleware(thunk)];
+const enhancers = [applyMiddleware(actionMiddleware)];
 
 const composeEnhancers =
   typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
