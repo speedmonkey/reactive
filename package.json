@@ -30,7 +30,7 @@
     }
   },
   "dependencies": {
-    "immer": "5.0.0",
+    "immer": "8.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-intl": "3.9.1",
